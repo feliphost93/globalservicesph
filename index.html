@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Empresa líder en servicios y productos de calidad. Conozca más sobre nosotros, nuestros servicios y productos.">
+    <meta name="keywords" content="servicios, productos, empresa, calidad, profesional">
+    <meta name="author" content="Tu Empresa">
+    <meta name="robots" content="index, follow">
+    <title>Global Services PH | Servicios y Productos de Calidad</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Styles -->
+    <link href="./static/css/styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <!-- Header and Navigation -->
+    <header id="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="./imagenes/logo.png" alt="imagen empresa">
+                </a>
+            </div>
+            <nav id="navbar">
+                <ul>
+                    <li><a href="#inicio" class="active">INICIO</a></li>
+                    <li><a href="#quienes-somos">QUIENES SOMOS</a></li>
+                    <li><a href="#servicios">SERVICIOS</a></li>
+                    <li><a href="#productos">PRODUCTOS</a></li>
+                    <li><a href="#contacto">CONTACTO</a></li>
+                </ul>
+                <div class="hamburger">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section with Slider -->
+    <section id="inicio" class="hero">
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide active">
+                    <div class="content">
+                        <h2 style="color:#3498db;">Bienvenidos a Global Services PH</h2>
+                        <p><strong>Soluciones innovadoras para sus necesidades</strong></p>
+                        <a href="#contacto" class="btn">Contáctanos</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="content">
+                        <h2>Servicios Profesionales</h2>
+                        <p>Expertos en soluciones a medida</p>
+                        <a href="#servicios" class="btn">Ver Servicios</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="content">
+                        <h2>Productos de Calidad</h2>
+                        <p>Lo mejor para nuestros clientes</p>
+                        <a href="#productos" class="btn">Ver Productos</a>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-nav">
+                <div class="dot active" data-slide="0"></div>
+                <div class="dot" data-slide="1"></div>
+                <div class="dot" data-slide="2"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="quienes-somos" class="quienes-somos">
+        <div class="container">
+            <div class="section-header">
+                <h2>Quiénes Somos</h2>
+                <div class="separator"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="about-card">
+                        <h3><i class="fas fa-bullseye"></i> Misión</h3>
+                        <p>Nuestra misión es proporcionar servicios y productos de la más alta calidad, superando las expectativas de nuestros clientes y estableciendo relaciones duraderas basadas en la confianza y el profesionalismo.</p>
+                    </div>
+                    <div class="about-card">
+                        <h3><i class="fas fa-eye"></i> Visión</h3>
+                        <p>Ser reconocidos como líderes en el mercado, innovando constantemente y expandiendo nuestra presencia nacional e internacional, manteniendo siempre nuestro compromiso con la excelencia y la satisfacción del cliente.</p>
+                    </div>
+                    <div class="about-card">
+                        <h3><i class="fas fa-chart-line"></i> Proyección</h3>
+                        <p>Buscamos crecimiento sostenible, adaptándonos a las nuevas tecnologías y tendencias del mercado, mientras mantenemos nuestros valores corporativos y responsabilidad social, asegurando un futuro próspero para nuestra empresa y colaboradores.</p>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-container">
+                        <!--<i class="fas fa-users fa-8x"></i>-->
+                        <div class="overlay">
+                            <h3>Nuestro Equipo</h3>
+                            <p>Profesionales comprometidos con la excelencia</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="servicios">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nuestros Servicios</h2>
+                <div class="separator"></div>
+                <p>Ofrecemos soluciones profesionales adaptadas a sus necesidades</p>
+            </div>
+            
+            <!-- Services Navigation -->
+            <div class="services-nav">
+                <div class="service-tab active" data-service="service-1">
+                    <i class="fas fa-cogs"></i>
+                    <span>Instalación cintas antideslizantes</span>
+                </div>
+                <div class="service-tab" data-service="service-2">
+                    <i class="fas fa-tools"></i>
+                    <span>Instalación reductores de velocidad</span>
+                </div>
+                <div class="service-tab" data-service="service-3">
+                    <i class="fas fa-chart-pie"></i>
+                    <span>Instalación carteleras publicitarias</span>
+                </div>
+                <div class="service-tab" data-service="service-4">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Instalación películas de seguridad</span>
+                </div>
+            </div>
+            
+            <!-- Services Content -->
+            <div class="services-content">
+                <div class="service-content active" id="service-1">
+                    <div class="service-content-inner">
+                        <div class="service-image">
+                            <img src="./imagenes/productos/Cinta_1.jpg" alt="escalera con cinta antideslizantes">
+                            <!--<i class="fas fa-cogs fa-5x"></i>-->
+                        </div>
+                        <div class="service-info">
+                            <h3>Instalación cintas antideslizantes</h3>
+                            <p>Descripción detallada del servicio 1. Explicamos cómo podemos ayudar a nuestros clientes con este servicio específico. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check-circle"></i> Característica 1 del servicio</li>
+                                <li><i class="fas fa-check-circle"></i> Característica 2 del servicio</li>
+                                <li><i class="fas fa-check-circle"></i> Característica 3 del servicio</li>
+                            </ul>
+                            <a href="#contacto" class="btn-secondary">Solicitar información</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-content" id="service-2">
+                    <div class="service-content-inner reverse">
+                        <div class="service-image">
+                            <img src="./imagenes/productos/Aparqueaderos_3.png" alt="reductores de velocidad parqueaderos">
+                            <!--<i class="fas fa-cogs fa-5x"></i>-->
+                        </div>
+                        <div class="service-info">
+                            <h3>Instalación reductores de velocidad</h3>
+                            <p>Descripción detallada del servicio 2. Explicamos cómo podemos ayudar a nuestros clientes con este servicio específico. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check-circle"></i> Característica 1 del servicio</li>
+                                <li><i class="fas fa-check-circle"></i> Característica 2 del servicio</li>
+                                <li><i class="fas fa-check-circle"></i> Característica 3 del servicio</li>
+                            </ul>
+                            <a href="#contacto" class="btn-secondary">Solicitar información</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-content" id="service-3">
+                    <div class="service-content-inner">
+                        <div class="service-image">
+                            <img src="./imagenes/productos/Cartelera_1.png" alt="carteleras publicitarias conjuntos">
+                            <!--<i class="fas fa-cogs fa-5x"></i>-->
+                        </div>
+                        <div class="service-info">
+                            <h3>Instalación carteleras publicitarias</h3>
+                            <p>Descripción detallada del servicio 3. Explicamos cómo podemos ayudar a nuestros clientes con este servicio específico. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check-circle"></i> Característica 1 del servicio</li>
+                                <li><i class="fas fa-check-circle"></i> Característica 2 del servicio</li>
+                                <li><i class="fas fa-check-circle"></i> Característica 3 del servicio</li>
+                            </ul>
+                            <a href="#contacto" class="btn-secondary">Solicitar información</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-content" id="service-4">
+                    <div class="service-content-inner reverse">
+                        <div class="service-image">
+                            <img src="./imagenes/productos/Pcontrolsolar_2.jpg" alt="escalera con cinta antideslizantes">
+                            <!--<i class="fas fa-cogs fa-5x"></i>-->
+                        </div>
+                        <div class="service-info">
+                            <h3>Instalación Peliculas de seguridad</h3>
+                            <p>Descripción detallada del servicio 4. Explicamos cómo podemos ayudar a nuestros clientes con este servicio específico. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check-circle"></i> Característica 1 del servicio</li>
+                                <li><i class="fas fa-check-circle"></i> Característica 2 del servicio</li>
+                                <li><i class="fas fa-check-circle"></i> Característica 3 del servicio</li>
+                            </ul>
+                            <a href="#contacto" class="btn-secondary">Solicitar información</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="productos" class="productos">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nuestros Productos</h2>
+                <div class="separator"></div>
+                <p>Calidad garantizada en todos nuestros productos</p>
+            </div>
+            
+            <!-- Products Categories -->
+            <div class="product-categories">
+                <div class="category-button active" data-category="all">Todos</div>
+                <div class="category-button" data-category="category-1">Cintas</div>
+                <div class="category-button" data-category="category-2">Tapetes</div>
+                <div class="category-button" data-category="category-3">Carteleras</div>
+            </div>
+            
+            <!-- Product Showcase -->
+            <div class="product-showcase">
+                <!-- Product Slider Controls -->
+                <button class="product-slider-control prev" aria-label="Anterior producto">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                
+                <!-- Products Slider Container -->
+                <div class="products-slider-container">
+                    <div class="products-slider">
+                        <!-- Product 1 -->
+                        <div class="product-slide" data-category="category-1">
+                            <div class="product-card animated">
+                                <div class="product-badge">Nuevo</div>
+                                <div class="product-image">
+                                    <i class="fas fa-box fa-4x"></i>
+                                </div>
+                                <div class="product-info">
+                                    <div class="product-title">
+                                        <h3>Cintas</h3>
+                                        <span class="product-price">$99.99</span>
+                                    </div>
+                                    <p>Descripción del producto 1. Características principales y beneficios para el cliente.</p>
+                                    <div class="product-features">
+                                        <span><i class="fas fa-star"></i> Característica 1</span>
+                                        <span><i class="fas fa-star"></i> Característica 2</span>
+                                    </div>
+                                    <a href="#contacto" class="btn-product">Más información</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Product 2 -->
+                        <div class="product-slide" data-category="category-2">
+                            <div class="product-card animated">
+                                <div class="product-badge hot">Popular</div>
+                                <div class="product-image">
+                                    <i class="fas fa-box-open fa-4x"></i>
+                                </div>
+                                <div class="product-info">
+                                    <div class="product-title">
+                                        <h3>Tapetes</h3>
+                                        <span class="product-price">$149.99</span>
+                                    </div>
+                                    <p>Descripción del producto 2. Características principales y beneficios para el cliente.</p>
+                                    <div class="product-features">
+                                        <span><i class="fas fa-star"></i> Característica 1</span>
+                                        <span><i class="fas fa-star"></i> Característica 2</span>
+                                    </div>
+                                    <a href="#contacto" class="btn-product">Más información</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Product 3 -->
+                        <div class="product-slide" data-category="category-1">
+                            <div class="product-card animated">
+                                <div class="product-image">
+                                    <i class="fas fa-cubes fa-4x"></i>
+                                </div>
+                                <div class="product-info">
+                                    <div class="product-title">
+                                        <h3>Carteleras</h3>
+                                        <span class="product-price">$199.99</span>
+                                    </div>
+                                    <p>Descripción del producto 3. Características principales y beneficios para el cliente.</p>
+                                    <div class="product-features">
+                                        <span><i class="fas fa-star"></i> Característica 1</span>
+                                        <span><i class="fas fa-star"></i> Característica 2</span>
+                                    </div>
+                                    <a href="#contacto" class="btn-product">Más información</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Product 4 -->
+                        <div class="product-slide" data-category="category-3">
+                            <div class="product-card animated">
+                                <div class="product-badge sale">Oferta</div>
+                                <div class="product-image">
+                                    <i class="fas fa-cube fa-4x"></i>
+                                </div>
+                                <div class="product-info">
+                                    <div class="product-title">
+                                        <h3>Pijamas Ascensores</h3>
+                                        <div class="product-price-container">
+                                            <span class="product-price-old">$299.99</span>
+                                            <span class="product-price">$249.99</span>
+                                        </div>
+                                    </div>
+                                    <p>Descripción del producto 4. Características principales y beneficios para el cliente.</p>
+                                    <div class="product-features">
+                                        <span><i class="fas fa-star"></i> Característica 1</span>
+                                        <span><i class="fas fa-star"></i> Característica 2</span>
+                                    </div>
+                                    <a href="#contacto" class="btn-product">Más información</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Product 5 -->
+                        <div class="product-slide" data-category="category-2">
+                            <div class="product-card animated">
+                                <div class="product-image">
+                                    <i class="fas fa-box-open fa-4x"></i>
+                                </div>
+                                <div class="product-info">
+                                    <div class="product-title">
+                                        <h3>Contenedores clasificacion reciduos</h3>
+                                        <span class="product-price">$129.99</span>
+                                    </div>
+                                    <p>Descripción del producto 5. Características principales y beneficios para el cliente.</p>
+                                    <div class="product-features">
+                                        <span><i class="fas fa-star"></i> Característica 1</span>
+                                        <span><i class="fas fa-star"></i> Característica 2</span>
+                                    </div>
+                                    <a href="#contacto" class="btn-product">Más información</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Product 6 -->
+                        <div class="product-slide" data-category="category-3">
+                            <div class="product-card animated">
+                                <div class="product-badge">Premium</div>
+                                <div class="product-image">
+                                    <i class="fas fa-cube fa-4x"></i>
+                                </div>
+                                <div class="product-info">
+                                    <div class="product-title">
+                                        <h3>Peliculas de seguridad</h3>
+                                        <span class="product-price">$349.99</span>
+                                    </div>
+                                    <p>Descripción del producto 6. Características principales y beneficios para el cliente.</p>
+                                    <div class="product-features">
+                                        <span><i class="fas fa-star"></i> Característica 1</span>
+                                        <span><i class="fas fa-star"></i> Característica 2</span>
+                                    </div>
+                                    <a href="#contacto" class="btn-product">Más información</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product Slider Controls -->
+                <button class="product-slider-control next" aria-label="Siguiente producto">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            
+            <!-- Products Pagination -->
+            <div class="products-pagination">
+                <div class="pagination-dot active" data-index="0"></div>
+                <div class="pagination-dot" data-index="1"></div>
+                <div class="pagination-dot" data-index="2"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="contacto">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contáctanos</h2>
+                <div class="separator"></div>
+                <p>Estamos aquí para ayudarte. ¡Déjanos tu mensaje!</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Dirección</h3>
+                            <p>Cra. 21a # 173-30 Bogotá, DC</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Teléfono</h3>
+                            <p>+57 316 023 021</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>info@globalph.com</p>
+                        </div>
+                    </div>
+                    <div class="social-media">
+                        <h3>Síguenos</h3>
+                        <div class="social-icons">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm" action="/php/contact.php" method="POST">
+                        <div class="form-group">
+                            <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="asunto" name="asunto" placeholder="Asunto" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="mensaje" name="mensaje" placeholder="Mensaje" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn-submit">Enviar Mensaje</button>
+                        </div>
+                        <div id="form-message"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="index.html">
+                        <img src="./imagenes/logoT.png" alt="imagen empresa">
+                    </a>
+                    <h2>Global Services PH</h2>
+                    <p>Soluciones de calidad para tus necesidades</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#quienes-somos">Quiénes Somos</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#productos">Productos</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-subscribe">
+                    <h3>Suscríbete a Nuestro Boletín</h3>
+                    <form action="/php/subscribe.php" method="POST" id="subscribeForm" class="subscribe-form">
+                        <input type="email" name="email" placeholder="Tu email" required>
+                        <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                    </form>
+                    <div id="subscribe-message"></div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Global Services PH. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" id="back-to-top" aria-label="Volver arriba"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- JavaScript -->
+    <script src="./static/js/main.js"></script>
+</body>
+</html>
