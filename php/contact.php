@@ -1,18 +1,43 @@
 <?php
-$name       = @trim(stripslashes($_POST['nombre'])); 
-$from       = @trim(stripslashes($_POST['email'])); 
-$subject    = @trim(stripslashes($_POST['asunto'])); 
-$message    = @trim(stripslashes($_POST['mensaje'])); 
-$to   		= 'felipeesquivel993@gmail.com';//replace with your email
+if($_SERVER['REQUEST_METHOD'] != 'POST' ){
+    header("Location: ../index.html" );
+}
 
-$headers   = array();
-$headers[] = "MIME-Version: 1.0";
-$headers[] = "Content-type: text/plain; charset=iso-8859-1";
-$headers[] = "From: {$name} <{$from}>";
-$headers[] = "Reply-To: <{$from}>";
-$headers[] = "Subject: {$subject}";
-$headers[] = "X-Mailer: PHP/".phpversion();
+require 'phpmailer/PHPMailer.php';
+require 'phpmailer/Exception.php';
 
-mail($to, $subject, $message, $headers);
+use PHPMailer\PHPMailer\PHPMailer;
 
-die;
+$nombre = $_POST['nombre'];
+//$apellido = $_POST['apellido'];
+$email = $_POST['email'];
+$asunto = $_POST['asunto'];
+$mensaje = $_POST['mensaje'];
+//$foto = $_FILES['foto']; //array assoc - $foto['tmp_name']; $foto['size'] - $foto['name']
+
+if( empty(trim($nombre)) ) $nombre = 'anonimo';
+//if( empty(trim($apellido)) ) $apellido = '';
+
+$body = <<<HTML
+    <h1>Contacto desde la web</h1>
+    <p>De: $nombre / $email</p>
+    <h2>Mensaje</h2>
+    $mensaje
+HTML;
+
+$mailer = new PHPMailer();
+$mailer->setFrom( $email, "$nombre $apellido" );
+$mailer->addAddress('felipeesquivel993@gmail.com','Sitio web');
+$mailer->Subject = "Mensaje web: $asunto";
+$mailer->msgHTML($body);
+$mailer->AltBody = strip_tags($body);
+$mailer->CharSet = 'UTF-8';
+
+//if( $foto['size'] > 0 ){
+//    $mailer->addAttachment( $foto['tmp_name'], $foto['name'] );
+//}
+
+$rta = $mailer->send( );
+
+//var_dump($rta);
+header("Location: ../index.html" );
