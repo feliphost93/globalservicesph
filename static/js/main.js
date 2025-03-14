@@ -253,7 +253,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Get form data
         const formData = new FormData(contactForm);
-        
+        console.log("AQUI ENTRO CORRECTAMENTE.")
         // Send form data using fetch API
         fetch('/php/contact.php', {
             method: 'POST',
