@@ -306,53 +306,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Newsletter subscription form handler
-    function handleSubscribeFormSubmit(e) {
-        e.preventDefault();
-        
-        const subscribeForm = document.getElementById('subscribeForm');
-        const subscribeMessage = document.getElementById('subscribe-message');
-        
-        if (!subscribeForm || !subscribeMessage) return;
-        
-        const formData = new FormData(subscribeForm);
-        
-        fetch('/php/subscribe.php', {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => response.json())
-        .then(data => {
-            subscribeMessage.style.display = 'block';
-            
-            if (data.success) {
-                // Show success message
-                subscribeMessage.style.cssText = 'display:block; color:#155724; background-color:#d4edda; padding:8px; border-radius:5px; margin-top:10px;';
-                subscribeMessage.textContent = data.message;
-                // Reset form
-                subscribeForm.reset();
-            } else {
-                // Show error message
-                subscribeMessage.style.cssText = 'display:block; color:#721c24; background-color:#f8d7da; padding:8px; border-radius:5px; margin-top:10px;';
-                subscribeMessage.textContent = data.message;
-            }
-            
-            // Hide message after 5 seconds
-            setTimeout(() => {
-                subscribeMessage.style.display = 'none';
-            }, 5000);
-        })
-        .catch(error => {
-            subscribeMessage.style.cssText = 'display:block; color:#721c24; background-color:#f8d7da; padding:8px; border-radius:5px; margin-top:10px;';
-            subscribeMessage.textContent = 'An error occurred. Please try again later.';
-            console.error('Error:', error);
-            
-            // Hide message after 5 seconds
-            setTimeout(() => {
-                subscribeMessage.style.display = 'none';
-            }, 5000);
-        });
-    }
     
     // Initialize all functions
     function init() {
