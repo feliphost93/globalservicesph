@@ -36,61 +36,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $headers .= "X-Mailer: PHP/" . phpversion() . "\r\n";
         $headers .= "MIME-Version: 1.0" . "\r\n";
         $headers .= "Content-Type: text/html; charset=UTF-8" . "\r\n";
-        
-        // Email content
-        $cuerpo = '
-        <!DOCTYPE html>
-        <html>
-        <head>
-            <style>
-                body {
-                    font-family: Arial, sans-serif;
-                    line-height: 1.6;
-                    color: #333;
-                }
-                .container {
-                    max-width: 600px;
-                    margin: 0 auto;
-                    padding: 20px;
-                    border: 1px solid #ddd;
-                    border-radius: 5px;
-                }
-                h2 {
-                    color: #3498db;
-                    border-bottom: 1px solid #eee;
-                    padding-bottom: 10px;
-                }
-                .content {
-                    margin-top: 20px;
-                }
-                .footer {
-                    margin-top: 30px;
-                    font-size: 12px;
-                    color: #777;
-                }
-            </style>
-        </head>
-        <body>
-            <div class="container">
-                <h2>Nuevo mensaje de contacto</h2>
-                <div class="content">
-                    <p><strong>Nombre:</strong> ' . htmlspecialchars($nombre) . '</p>
-                    <p><strong>Email:</strong> ' . htmlspecialchars($email) . '</p>
-                    <p><strong>Asunto:</strong> ' . htmlspecialchars($asunto) . '</p>
-                    <p><strong>Mensaje:</strong></p>
-                    <p>' . nl2br(htmlspecialchars($mensaje)) . '</p>
-                </div>
-                <div class="footer">
-                    <p>Este mensaje fue enviado desde el formulario de contacto de Tu Empresa.</p>
-                    <p>Fecha: ' . date('d/m/Y H:i:s') . '</p>
-                </div>
-            </div>
-        </body>
-        </html>
-        ';
-        
+               
         // Send email
-        $enviado = @mail($para, "Nuevo contacto: $asunto", $cuerpo, $headers);
+        $enviado = @mail($para, "Nuevo contacto: $asunto",  $mensaje, $headers);
         
         // Check if email was sent successfully
         if ($enviado) {
